@@ -1,2 +1,2 @@
-# ansible
-Ansible playbook that automates my development setup
+# My Development environment
+Ansible playbook that automates the creation of my development environment.
