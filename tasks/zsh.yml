@@ -8,6 +8,14 @@
   tags:
     - zsh
 
+- name: Add git to oh-my-zsh plugins list
+  replace:
+    path: ~/.zshrc
+    regexp: 'plugins=\((.*)\)'
+    replace: 'plugins=(git \1)'
+  tags:
+    - zsh
+
 - name: Install zsh-autosuggestions plugin
   git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions' 
@@ -20,5 +28,35 @@
     path: ~/.zshrc
     regexp: 'plugins=\((.*)\)'
     replace: 'plugins=(\1 zsh-autosuggestions)'
+  tags:
+    - zsh
+
+- name: Install zsh-syntax-highlighting plugin
+  git:
+    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting' 
+    dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting'
+  tags:
+    - zsh
+
+- name: Add zsh-syntax-highlighting to oh-my-zsh plugins list
+  replace:
+    path: ~/.zshrc
+    regexp: 'plugins=\((.*)\)'
+    replace: 'plugins=(\1 zsh-syntax-highlighting)'
+  tags:
+    - zsh
+
+- name: Install zsh-fast-syntax-highlighting plugin
+  git:
+    repo: 'https://github.com/zdharma-continuum/fast-syntax-highlighting.git' 
+    dest: '~/.oh-my-zsh/plugins/fast-syntax-highlighting'
+  tags:
+    - zsh
+
+- name: Add zsh-fast-syntax-highlighting to oh-my-zsh plugins list
+  replace:
+    path: ~/.zshrc
+    regexp: 'plugins=\((.*)\)'
+    replace: 'plugins=(\1 fast-syntax-highlighting)'
   tags:
     - zsh
