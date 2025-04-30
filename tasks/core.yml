@@ -1,8 +1,9 @@
-- name: Install system packages
+- name: Install system core packages
   apt:
     pkg: 
       - build-essential 
       - curl 
+      - git
       - libbz2-dev 
       - libffi-dev 
       - liblzma-dev 
@@ -14,9 +15,11 @@
       - libxmlsec1-dev 
       - llvm 
       - make 
+      - software-properties-common 
       - tk-dev 
       - unzip
       - wget 
+      - wl-clipboard
       - xz-utils 
       - zlib1g-dev 
   tags:
