@@ -1,8 +1,8 @@
-- name: Install asdf tool version manager
-  git:
-    repo: 'https://github.com/asdf-vm/asdf.git' 
-    version: 'v0.13.1'
-    dest: '~/.asdf'
+- name: Install asdf version manager
+  unarchive:
+    src: https://github.com/asdf-vm/asdf/releases/download/v0.16.7/asdf-v0.16.7-linux-386.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes
   tags:
     - asdf
 
@@ -15,22 +15,32 @@
     - asdf
 
 - name: Install asdf golang plugin
-  shell: '{{ asdf_executable }} plugin add golang'
+  shell: '{{ asdf_executable }} plugin add golang https://github.com/asdf-community/asdf-golang.git'
+  tags:
+    - asdf
+
+- name: Install asdf lazydocker plugin
+  shell: '{{ asdf_executable }} plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git'
   tags:
     - asdf
 
 - name: Install asdf neovim plugin
-  shell: '{{ asdf_executable }} plugin add neovim'
+  shell: '{{ asdf_executable }} plugin add neovim https://github.com/richin13/asdf-neovim'
+  tags:
+    - asdf
+
+- name: Install asdf nodejs plugin
+  shell: '{{ asdf_executable }} plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git'
   tags:
     - asdf
 
 - name: Install asdf python plugin
-  shell: '{{ asdf_executable }} plugin add python'
+  shell: '{{ asdf_executable }} plugin add python https://github.com/asdf-community/asdf-python'
   tags:
     - asdf
 
 - name: Install asdf rust plugin
-  shell: '{{ asdf_executable }} plugin add rust'
+  shell: '{{ asdf_executable }} plugin add rust https://github.com/code-lever/asdf-rust'
   tags:
     - asdf
 
