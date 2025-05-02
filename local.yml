@@ -1,10 +1,10 @@
 - name: Setting up my development environment
+  become: true
   hosts: localhost
   vars_files:
     - vars/asdf.yml
   pre_tasks:
     - name: Update apt cache
-      become: true
       apt:
         update_cache: true
       tags:
