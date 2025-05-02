@@ -9,7 +9,6 @@
         update_cache: true
       tags:
         - asdf
-        - asdf-tools
         - core
         - zsh
   tasks:

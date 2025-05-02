@@ -47,11 +47,11 @@
 - name: Install asdf tool versions
   shell: '{{ asdf_executable }} install'
   tags:
-    - asdf-tools
+    - asdf
 
 - name: Set asdf tool versions globally
   copy:
     src: .tool-versions
     dest: ~/
   tags:
-    - asdf-tools
+    - asdf
