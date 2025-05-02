@@ -8,14 +8,6 @@
   tags:
     - zsh
 
-- name: Add git to oh-my-zsh plugins list
-  replace:
-    path: ~/.zshrc
-    regexp: 'plugins=\((.*)\)'
-    replace: 'plugins=(git \1)'
-  tags:
-    - zsh
-
 - name: Install zsh-autosuggestions plugin
   git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions' 
