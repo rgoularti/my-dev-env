@@ -52,3 +52,6 @@
     replace: 'plugins=(\1 fast-syntax-highlighting)'
   tags:
     - zsh
+
+- name: Make zsh the default shell
+  shell: chsh -s `which zsh`
