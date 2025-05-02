@@ -15,6 +15,7 @@
       - libxmlsec1-dev 
       - llvm 
       - make 
+      - ripgrep
       - software-properties-common 
       - tk-dev 
       - unzip
