@@ -11,6 +11,6 @@ RUN apt update && \
     apt clean autoclean && \
     apt autoremove -y
 
-COPY . .
+COPY . ansible
 
-CMD [ "sh", "-c", "ansible-playbook $TAGS local.yml"]
+CMD [ "sh", "-c", "ansible-playbook $TAGS ansible/local.yml"]
