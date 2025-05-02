@@ -1,4 +1,5 @@
-- hosts: localhost
+- name: Setting up my development environment
+  hosts: localhost
   vars_files:
     - vars/asdf.yml
   pre_tasks:
